@@ -4,9 +4,25 @@
 <head>
     <title th:text="${title}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="" th:href="@{/images/favicon.ico}" type="image/x-icon">
+    <link rel="stylesheet" href="" th:href="@{/css/styles.css}">
 </head>
 <body>
-    <h1>Main page</h1>
-    <a href="/menu">Menu</a>
+<div class="container">
+    <header class="header">
+        <div class="header__menu">Menu</div>
+    </header>
+
+    <main>
+        Main
+    </main>
+
+    <footer>
+        Fotter
+    </footer>
+</div>
+
+
+    <script src="" th:src="@{/js/home.js}"></script>
 </body>
 </html>
