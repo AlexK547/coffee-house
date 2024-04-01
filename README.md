@@ -1,1 +1,2 @@
-# coffee-house
+# Coffee house
+
