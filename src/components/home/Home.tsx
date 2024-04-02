@@ -1,5 +1,9 @@
+import Enjoy from "../enjoy/Enjoy";
+
 export default function Home() {
   return (
-    <div>Home</div>
+    <main>
+      <Enjoy />
+    </main>
   )
 }

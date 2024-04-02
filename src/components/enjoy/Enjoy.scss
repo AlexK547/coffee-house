@@ -1,0 +1,59 @@
+.enjoy {
+    width: 1360px;
+    height: 644px;
+    margin: 0 auto;
+    border-radius: 40px;
+    margin-top: 20px;
+    background: url("../../assets/img/jpg/enjoy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__content {
+        margin-left: 100px;
+        width: 530px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    &__title {
+        margin-bottom: 40px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 105%;
+        color: #e1d4c9;
+        &_enjoy {
+            color: #b0907a;
+        }
+    }
+    &__text {
+        margin-bottom: 40px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #e1d4c9;
+    }
+    
+    &__btn {
+        border: none;
+        border-radius: 100px;
+        padding: 20px 78px;
+        width: 200px;
+        height: 64px;
+        background: #e1d4c9;
+
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #403f3d;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
