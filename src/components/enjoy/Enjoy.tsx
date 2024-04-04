@@ -1,6 +1,7 @@
+import { FC } from "react"
 import "./Enjoy.scss"
 
-export default function Enjoy() {
+const Enjoy: FC = () => {
   return (
     <section className="enjoy">
         <div className="enjoy__content">
@@ -16,3 +17,5 @@ export default function Enjoy() {
     </section>
   )
 }
+
+export default Enjoy;

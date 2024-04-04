@@ -1,7 +1,8 @@
+import { FC } from "react";
 import Enjoy from "../enjoy/Enjoy";
 import Favorites from "../favorites/Favorites";
 
-export default function Home() {
+const Home: FC = () => {
   return (
     <main>
       <Enjoy />
@@ -9,3 +10,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home;

@@ -1,8 +1,9 @@
 import "./Header.scss"
 import logo from "../../assets/img/svg/logo.svg"
 import coffeeCup from "../../assets/img/svg/coffee-cup.svg"
+import { FC } from "react"
 
-export default function Header() {
+const Header: FC = () => {
   return (
     <header className='header'>
         <div className="logo">
@@ -23,3 +24,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default Header;

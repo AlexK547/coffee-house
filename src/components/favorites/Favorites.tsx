@@ -1,8 +1,9 @@
 import "./Favorites.scss";
 import card1 from "../../assets/img/png/coffee-slider-1.png";
 import arrowLeft from "../../assets/img/svg/button-icon-dark.svg";
+import { FC } from "react";
 
-export default function Favorites() {
+const Favorites: FC = () => {
   return (
     <section className="favorite">
       <h2 className="favorite__title">
@@ -42,3 +43,5 @@ export default function Favorites() {
     </section>
   );
 }
+
+export default Favorites;
