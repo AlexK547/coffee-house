@@ -1,6 +1,6 @@
 import "./Header.scss"
-import logo from "../../assets/img/svg/logo.svg"
-import coffeeCup from "../../assets/img/svg/coffee-cup.svg"
+import logo from "/img/svg/logo.svg"
+import coffeeCup from "/img/svg/coffee-cup.svg"
 import { FC } from "react"
 
 const Header: FC = () => {

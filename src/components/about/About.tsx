@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./about.scss";
+import "./About.scss";
 
 const About: FC = () => {
   return (

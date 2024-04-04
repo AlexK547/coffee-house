@@ -1,6 +1,6 @@
 import "./Favorites.scss";
-import card1 from "../../assets/img/png/coffee-slider-1.png";
-import arrowLeft from "../../assets/img/svg/button-icon-dark.svg";
+import card1 from "/img/png/coffee-slider-1.png";
+import arrowLeft from "/img/svg/button-icon-dark.svg";
 import { FC } from "react";
 
 const Favorites: FC = () => {

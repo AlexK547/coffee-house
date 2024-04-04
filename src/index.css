@@ -6,14 +6,11 @@
 body {
   display: flex;
   justify-content: center;
+  background: #E1D4C9;
 }
 
 #root {
   width: 1440px;
-  background: #E1D4C9;
-  /* display: flex;
-  align-items: center;
-  flex-direction: column; */
 }
 
 li {
