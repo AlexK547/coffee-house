@@ -4,7 +4,7 @@ import video from "/video/video(720p).webm"
 
 const Enjoy: FC = () => {
   return (
-    <section className="enjoy">
+    <section className="enjoy" id="enjoy">
       <video autoPlay muted loop>
         <source src={video} type="video/webm" />
       </video>

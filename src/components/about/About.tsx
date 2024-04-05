@@ -3,7 +3,7 @@ import "./About.scss";
 
 const About: FC = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2 className="about__title">
         Resource is <span className="about__title_perfect">the perfect and cozy place</span> where you can enjoy a variety of
         hot beverages, relax, catch up with friends, or get some work done.

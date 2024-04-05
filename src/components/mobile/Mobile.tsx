@@ -6,7 +6,7 @@ import mobileScreens from "/img/png/mobile-screens.png";
 
 const Mobile: FC = () => {
   return (
-    <section className="mobile">
+    <section className="mobile" id="mobile">
       <div className="mobile__content">
         <h2 className="mobile__title">
           <span>Download</span> our apps to start ordering

@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
@@ -17,9 +17,6 @@ const App: FC = () => {
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
 
-      <Link to={"/"}>Home</Link>
-      <div></div>
-      <Link to={"/menu"}>Menu</Link>
     </BrowserRouter>
   );
 };

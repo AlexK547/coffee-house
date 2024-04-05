@@ -5,7 +5,7 @@ import { FC } from "react";
 
 const Favorites: FC = () => {
   return (
-    <section className="favorite">
+    <section className="favorite" id="favorite">
       <h2 className="favorite__title">
         Choose your <span className="favorite__title_favorite">favorite</span>{" "}
         coffee
