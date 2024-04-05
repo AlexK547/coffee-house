@@ -1,0 +1,85 @@
+.mobile {
+    width: 1360px;
+    height: 630px;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__content {
+        width: 630px;
+        height: 342px;
+    }
+    &__title {
+        width: 90%;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 125%;
+        color: #403f3d;
+
+        span {
+            font-style: italic;
+            color: #b0907a;
+        }
+    }
+    &__text {
+        width: 90%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #403f3d;
+    }
+
+    &__apps {
+        display: flex;
+        gap: 20px;
+    }
+    &__app {
+        display: flex;
+        align-items: center;
+        border: 1px solid #665f55;
+        border-radius: 100px;
+        width: 200px;
+        height: 64px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__icon {
+        width: 36px;
+        height: 36px;
+        margin-left: 20px;
+        margin-right: 8px;
+    }
+    &__text-store {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+    &__availiable {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 140%;
+        text-align: center;
+        color: #403f3d;
+    }
+    &__market {
+        margin-top: 2px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: #403f3d;
+    }
+    &__screens {
+        width: 630px;
+        height: 630px;
+    }
+}
