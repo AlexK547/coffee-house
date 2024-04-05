@@ -5,6 +5,7 @@ import Menu from "./components/menu/Menu";
 import NotFound from "./components/404NotFound";
 import Header from "./components/header/Header";
 import { FC } from "react";
+import Footer from "./components/footer/Footer";
 
 const App: FC = () => {
   return (
@@ -16,6 +17,8 @@ const App: FC = () => {
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
+
+      <Footer />
 
     </BrowserRouter>
   );
