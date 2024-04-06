@@ -1,0 +1,141 @@
+.menu-items {
+    width: 1360px;
+    height: 1320px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        width: 800px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 125%;
+        text-align: center;
+        color: #403f3d;
+        margin-bottom: 40px;
+        span {
+            font-style: italic;
+            color: #b0907a;
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    gap: 16px;
+
+    &__item {
+        border: 1px solid #c1b6ad;
+        border-radius: 100px;
+        padding: 0 10px;
+        height: 46px;
+        display: flex;
+        align-items: center;
+        color: #403f3d;
+    }
+    &__img {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+    &__text {
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+    }
+    &__item_select {
+        background: #665f55;
+        color: #e1d4c9;
+    }
+}
+
+.menu-cards {
+    width: 1360px;
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.menu-card {
+    border: 1px solid #c1b6ad;
+    border-radius: 40px;
+    width: 308px;
+    height: 506px;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img1 {
+        background: url("/img/jpg/coffee-1.jpg");
+    }
+    &__img2 {
+        background: url("/img/jpg/coffee-2.jpg");
+    }
+    &__img3 {
+        background: url("/img/jpg/coffee-3.jpg");
+    }
+    &__img4 {
+        background: url("/img/jpg/coffee-4.jpg");
+    }
+    &__img5 {
+        background: url("/img/jpg/coffee-5.jpg");
+    }
+    &__img6 {
+        background: url("/img/jpg/coffee-6.jpg");
+    }
+    &__img7 {
+        background: url("/img/jpg/coffee-7.jpg");
+    }
+    &__img8 {
+        background: url("/img/jpg/coffee-8.jpg");
+    }
+
+    &__img {
+        border-radius: 40px;
+        width: 310px;
+        height: 310px;
+        overflow: hidden;
+        
+        background-position: center;
+        background-size: 110%;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-size: 100%;
+        }
+    }
+    &__title {
+        width: 90%;
+        margin-top: 20px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        color: #403f3d;
+    }
+    &__text {
+        width: 90%;
+        margin-top: 12px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: #403f3d;
+    }
+    &__price {
+        width: 90%;
+        margin-top: 12px;
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        color: #403f3d;
+    }
+}
