@@ -3,7 +3,6 @@ import "./Menu.scss";
 import tabItem1 from "/img/png/icon-coffee.png";
 import tabItem2 from "/img/png/icon-tea.png";
 import tabItem3 from "/img/png/icon-dessert.png";
-import imageCoffee1 from "/img/jpg/coffee-1.jpg"
 
 const Menu: FC = () => {
   return (
