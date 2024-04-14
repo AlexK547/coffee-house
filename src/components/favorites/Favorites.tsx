@@ -7,8 +7,7 @@ const Favorites: FC = () => {
   return (
     <section className="favorite" id="favorite">
       <h2 className="favorite__title">
-        Choose your <span className="favorite__title_favorite">favorite</span>{" "}
-        coffee
+        Choose your <span>favorite</span> coffee
       </h2>
       <div className="slider">
         <div className="slider__arrow">

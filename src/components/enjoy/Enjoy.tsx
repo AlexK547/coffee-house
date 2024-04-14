@@ -10,7 +10,7 @@ const Enjoy: FC = () => {
       </video>
       <div className="enjoy__content">
         <h1 className="enjoy__title">
-          <span className="enjoy__title_enjoy">Enjoy</span> premium coffee at
+          <span>Enjoy</span> premium coffee at
           our charming cafe
         </h1>
         <p className="enjoy__text">

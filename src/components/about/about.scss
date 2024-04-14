@@ -15,7 +15,7 @@
         line-height: 125%;
         color: #403f3d;
 
-        &_perfect {
+        span {
             font-style: italic;
             color: #b0907a;
         }
@@ -35,7 +35,7 @@
 
         &_top {
             aspect-ratio: 660 / 590;
-            border-radius: 30px;
+            border-radius: 20px;
             overflow: hidden;
             background-image: url("/img/jpg/about-1.jpg");
             background-position: center;
@@ -49,7 +49,7 @@
         }
         &_bottom {
             aspect-ratio: 660 / 430;
-            border-radius: 30px;
+            border-radius: 20px;
             overflow: hidden;
             background-image: url("/img/jpg/about-2.jpg");
             background-position: center;
@@ -69,7 +69,7 @@
         &_top {
             width: 660px;
             height: 430px;
-            border-radius: 30px;
+            border-radius: 20px;
             overflow: hidden;
             background-image: url("/img/jpg/about-3.jpg");
             background-position: center;
@@ -83,7 +83,7 @@
         &_bottom {
             width: 660px;
             height: 590px;
-            border-radius: 30px;
+            border-radius: 20px;
             overflow: hidden;
             background-image: url("/img/jpg/about-4.jpg");
             background-position: center;

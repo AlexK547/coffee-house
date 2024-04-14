@@ -16,7 +16,7 @@
         text-align: center;
         color: #403f3d;
 
-        &_favorite {
+        span {
             font-style: italic;
             color: #b0907a;
         }
@@ -60,7 +60,6 @@
         margin-bottom: 16px;
     }
     &__content {
-        width: 90%;
         font-family: "Inter", sans-serif;
         font-weight: 400;
         font-size: 16px;

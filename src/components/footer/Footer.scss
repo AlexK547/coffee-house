@@ -1,5 +1,6 @@
 .contacts {
     border-radius: 40px;
+    margin: 0 auto;
     margin-top: 100px;
     margin-bottom: 40px;
     width: 1360px;
@@ -7,7 +8,6 @@
     background: #665f55;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
     &__content {
         width: 530px;
@@ -49,6 +49,7 @@
     &__info {
         width: 530px;
         height: 186px;
+        margin-left: 100px;
     }
     ul {
         display: flex;
