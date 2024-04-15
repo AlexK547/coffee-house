@@ -18,7 +18,9 @@
 }
 .navigation {
     &__items {
+        width: 454px;
         display: flex;
+        justify-content: end;
         gap: 40px;
     }
     &__item {
