@@ -1,9 +1,14 @@
 import "./Favorites.scss";
-import card1 from "/img/png/coffee-slider-1.png";
+// import card1 from "/img/png/coffee-slider-1.png";
 import arrowLeft from "/img/svg/button-icon-dark.svg";
 import { FC } from "react";
+import { listFavoriteCoffee } from "../../store/favoriteCoffee";
+import { getImageURL } from "../../utils/image-util";
 
 const Favorites: FC = () => {
+  const favoriteCoffee = listFavoriteCoffee[0];
+  console.log(favoriteCoffee)
+
   return (
     <section className="favorite" id="favorite">
       <h2 className="favorite__title">
@@ -18,13 +23,10 @@ const Favorites: FC = () => {
           />
         </div>
         <div className="card">
-          <img className="card__img" src={card1} alt="card" />
-          <h3 className="card__title">S’mores Frappuccino</h3>
-          <p className="card__content">
-            This new drink takes an espresso and mixes it with brown sugar and
-            cinnamon before being topped with oat milk.
-          </p>
-          <p className="card__price">$5.50</p>
+          <img className="card__img" src={getImageURL(favoriteCoffee.image)} alt="card" />
+          <h3 className="card__title">{favoriteCoffee.title}</h3>
+          <p className="card__content">{favoriteCoffee.text}</p>
+          <p className="card__price">{favoriteCoffee.price}</p>
         </div>
         <div className="slider__arrow">
           <img
@@ -41,6 +43,6 @@ const Favorites: FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default Favorites;

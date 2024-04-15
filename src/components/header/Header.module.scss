@@ -6,6 +6,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
 }
 .logo {
     &__icon {
@@ -19,10 +22,6 @@
         gap: 40px;
     }
     &__item {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
         color: #403f3d;
         transition: all ease-in 0.3s;
 
@@ -32,6 +31,7 @@
         }
     }
 }
+
 .menu {
     display: flex;
     align-items: center;
@@ -39,12 +39,8 @@
     transition: all ease-in 0.3s;
 
     &__title {
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 150%;
         color: #403f3d;
-        margin-top: 5px;
+        margin-top: 3px;
         transition: all ease-in 0.3s;
 
         &:hover {

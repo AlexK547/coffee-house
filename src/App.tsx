@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Home from "./components/home/Home";
 import Menu from "./components/menu/Menu";
 import NotFound from "./components/404NotFound";
