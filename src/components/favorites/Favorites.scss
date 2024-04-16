@@ -32,14 +32,29 @@
 
 
     &__arrow {
-        width: 60px;
-        height: 60px;
+        width: 62px;
+        height: 62px;
+        border: 1px solid #665f55;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
 
-        &_right {
-            transform: rotate(180deg);
+        svg {
+            stroke-width: 1px;
+            stroke: #403f3d;
+            path {
+                transition: all 0.3s ease-in;
+            }
         }
+
         &:hover {
-            cursor: pointer;
+            background: #665f55;
+            svg path {
+                stroke: #e1d4c9;
+            }
         }
     }
 }
@@ -92,9 +107,11 @@
         height: 4px;
         width: 40px;
         background: #c1b6ad;
+        transition: all 0.3s ease-in;
 
         &_select {
             background: #665f55;
+            transition: all 0.3s ease-in;
         }
     }
 }
