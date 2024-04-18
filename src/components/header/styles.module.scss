@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     height: 28px;
-    transition: all ease-in 0.3s;
+    cursor: pointer;
 
     &__title {
         color: #403f3d;
@@ -54,7 +54,8 @@
         height: 20px;
         margin-left: 8px;
     }
-    &:hover {
-        cursor: pointer;
+    &_under-line {
+        margin-top: 2px;
+        border-bottom: 2px solid #403f3d;
     }
 }

@@ -14,7 +14,7 @@ function App() {
       <Header isHome={isHomePage} setHome={setIsHomePage}/>
 
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Home setHome={setIsHomePage}/>}></Route>
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>

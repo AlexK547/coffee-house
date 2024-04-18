@@ -1,4 +1,4 @@
-import styles from "./Header.module.scss";
+import styles from "./styles.module.scss";
 import logo from "/img/svg/logo.svg";
 import coffeeCup from "/img/svg/coffee-cup.svg";
 import { Link } from "react-router-dom";
@@ -47,7 +47,7 @@ function Header(props: propsHeader) {
         </ul>
       </nav>
       <Link to={"/menu"} onClick={() => props.setHome(false)}>
-        <div className={styles.menu}>
+        <div className={props.isHome ? styles.menu : styles.menu + " " + styles["menu_under-line"]}>
           <div className={styles.menu__title}>Menu</div>
           <img className={styles.menu__icon} src={coffeeCup} alt="cup" />
         </div>

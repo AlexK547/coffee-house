@@ -1,13 +1,16 @@
-import { FC } from "react";
 import Enjoy from "../enjoy/Enjoy";
 import Favorites from "../favorites/Favorites";
 import About from "../about/About";
 import Mobile from "../mobile/Mobile";
 
-const Home: FC = () => {
+interface propsHome {
+  setHome: Function;
+}
+
+function Home (props: propsHome) {
   return (
     <main>
-      <Enjoy />
+      <Enjoy setHome={props.setHome}/>
       <Favorites />
       <About />
       <Mobile />

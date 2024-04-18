@@ -1,9 +1,8 @@
-import "./Favorites.scss";
-import { FC, useState } from "react";
+import styles from "./styles.module.scss";
+import { useState } from "react";
 import { listFavoriteCoffee } from "../../store/favoriteCoffee";
-// import { getImageURL } from "../../utils/image-util";
 
-const Favorites: FC = () => {
+function Favorites() {
   const [numberCoffee, setNumberCoffee] = useState<number>(0);
   const [currentCoffee, setCurrentCoffee] = useState(listFavoriteCoffee[numberCoffee]);
 
@@ -29,33 +28,32 @@ const Favorites: FC = () => {
   }
 
   return (
-    <section className="favorite" id="favorite">
-      <h2 className="favorite__title">
+    <section className={styles.favorite} id="favorite">
+      <h2 className={styles.favorite__title}>
         Choose your <span>favorite</span> coffee
       </h2>
-      <div className="slider">
-        <div className="slider__arrow" onClick={onClickLeft}>
+      <div className={styles.slider}>
+        <div className={styles.slider__arrow} onClick={onClickLeft}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.5 7H1M1 7L7 1M1 7L7 13" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <div className="card">
-          {/* <img className="card__img" src={getImageURL(favoriteCoffee.image)} alt="card" /> */}
-          <img className="card__img" src={currentCoffee.image} alt="card" />
-          <h3 className="card__title">{currentCoffee.title}</h3>
-          <p className="card__content">{currentCoffee.text}</p>
-          <p className="card__price">{currentCoffee.price}</p>
+        <div className={styles.card}>
+          <img className={styles.card__img} src={currentCoffee.image} alt="card" />
+          <h3 className={styles.card__title}>{currentCoffee.title}</h3>
+          <p className={styles.card__content}>{currentCoffee.text}</p>
+          <p className={styles.card__price}>{currentCoffee.price}</p>
         </div>
-        <div className="slider__arrow" onClick={onClickRight}>
+        <div className={styles.slider__arrow} onClick={onClickRight}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
       </div>
-      <div className="controls">
-        <div className={numberCoffee === 0 ? "controls__item controls__item_select" : "controls__item"}></div>
-        <div className={numberCoffee === 1 ? "controls__item controls__item_select" : "controls__item"}></div>
-        <div className={numberCoffee === 2 ? "controls__item controls__item_select" : "controls__item"}></div>
+      <div className={styles.controls}>
+        <div className={numberCoffee === 0 ? `${styles.controls__item} ${styles.controls__item_select}` : styles.controls__item}></div>
+        <div className={numberCoffee === 1 ? `${styles.controls__item} ${styles.controls__item_select}` : styles.controls__item}></div>
+        <div className={numberCoffee === 2 ? `${styles.controls__item} ${styles.controls__item_select}` : styles.controls__item}></div>
       </div>
     </section>
   );
