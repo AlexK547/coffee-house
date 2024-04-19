@@ -1,81 +1,100 @@
-import { FC } from "react";
-import "./Menu.scss";
+import styles from "./styles.module.scss";
+import { FC, useState } from "react";
 import tabItem1 from "/img/png/icon-coffee.png";
 import tabItem2 from "/img/png/icon-tea.png";
 import tabItem3 from "/img/png/icon-dessert.png";
+import MenuCard from "./MenuCard";
+import { listCoffee } from "../../store/menuCoffee";
+import { listTea } from "../../store/menuTea";
+import { listDessert } from "../../store/menuDessert";
 
 const Menu: FC = () => {
+  const [choice, setChoice] = useState<number>(0);
+
+  const clickChoice = (word: string): void => {
+    if (word === "coffee") {
+      setChoice(0);
+    }
+    if (word === "tea") {
+      setChoice(1);
+    }
+    if (word === "dessert") {
+      setChoice(2);
+    }
+  };
+
   return (
-    <section className="menu-items">
-      <h2 className="menu-items__title">
+    <section className={styles["menu-items"]}>
+      <h2 className={styles["menu-items__title"]}>
         Behind each of our cups hides an <span>amazing surprise</span>
       </h2>
-      <div className="content">
-        <div className="tabs">
-          <div className="tabs__item tabs__item_select">
-            <img src={tabItem1} alt="coffee" className="tabs__img" />
-            <p className="tabs__text">Coffee</p>
+      <div className={styles.content}>
+        <div className={styles.tabs}>
+          <div
+            onClick={() => clickChoice("coffee")}
+            className={
+              choice === 0
+                ? `${styles.tabs__item} ${styles.tabs__item_select}`
+                : `${styles.tabs__item}`
+            }
+          >
+            <div className={styles["tabs__item-img"]}>
+              <img src={tabItem1} alt="coffee" />
+            </div>
+            <p className={styles["tabs__item-text"]}>Coffee</p>
           </div>
-          <div className="tabs__item">
-            <img src={tabItem2} alt="coffee" className="tabs__img" />
-            <p className="tabs__text">Tea</p>
+          <div
+            onClick={() => clickChoice("tea")}
+            className={
+              choice === 1
+                ? `${styles.tabs__item} ${styles.tabs__item_select}`
+                : `${styles.tabs__item}`
+            }
+          >
+            <div className={styles["tabs__item-img"]}>
+              <img src={tabItem2} alt="coffee" />
+            </div>
+            <p className={styles["tabs__item-text"]}>Tea</p>
           </div>
-          <div className="tabs__item">
-            <img src={tabItem3} alt="coffee" className="tabs__img" />
-            <p className="tabs__text">Dessert</p>
+          <div
+            onClick={() => clickChoice("dessert")}
+            className={
+              choice === 2
+                ? `${styles.tabs__item} ${styles.tabs__item_select}`
+                : `${styles.tabs__item}`
+            }
+          >
+            <div className={styles["tabs__item-img"]}>
+              <img src={tabItem3} alt="coffee" />
+            </div>
+            <p className={styles["tabs__item-text"]}>Dessert</p>
           </div>
         </div>
       </div>
-      <div className="menu-cards">
-        <div className="menu-card">
-          <div className="menu-card__img1 menu-card__img"></div>
-          <h3 className="menu-card__title">Irish coffee</h3>
-          <p className="menu-card__text">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-          <p className="menu-card__price">$7.00</p>
+
+      {choice === 0 && (
+        <div className={styles["menu-cards"]}>
+          {listCoffee.map((item) => (
+            <MenuCard key={item.id} drink={item} />
+          ))}
         </div>
-        <div className="menu-card">
-          <div className="menu-card__img2 menu-card__img"></div>
-          <h3 className="menu-card__title">Kahlua coffee</h3>
-          <p className="menu-card__text">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-          <p className="menu-card__price">$7.00</p>
+      )}
+
+      {choice === 1 && (
+        <div className={styles["menu-cards"]}>
+          {listTea.map((item) => (
+            <MenuCard key={item.id} drink={item} />
+          ))}
         </div>
-        <div className="menu-card">
-          <div className="menu-card__img3 menu-card__img"></div>
-          <h3 className="menu-card__title">Honey raf</h3>
-          <p className="menu-card__text">Espresso with frothed milk, cream and aromatic honey</p>
-          <p className="menu-card__price">$5.50</p>
+      )}
+
+      {choice === 2 && (
+        <div className={styles["menu-cards"]}>
+          {listDessert.map((item) => (
+            <MenuCard key={item.id} drink={item} />
+          ))}
         </div>
-        <div className="menu-card">
-          <div className="menu-card__img4 menu-card__img"></div>
-          <h3 className="menu-card__title">Ice cappuccino</h3>
-          <p className="menu-card__text">Cappuccino with soft thick foam in summer version with ice</p>
-          <p className="menu-card__price">$4.00</p>
-        </div>
-        <div className="menu-card">
-          <div className="menu-card__img5 menu-card__img"></div>
-          <h3 className="menu-card__title">Espresso</h3>
-          <p className="menu-card__text">Classic black coffee</p>
-          <p className="menu-card__price">$4.50</p>
-        </div>
-        <div className="menu-card">
-          <div className="menu-card__img6 menu-card__img"></div>
-          <h3 className="menu-card__title">Latte</h3>
-          <p className="menu-card__text">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-          <p className="menu-card__price">$5.50</p>
-        </div>
-        <div className="menu-card">
-          <div className="menu-card__img7 menu-card__img"></div>
-          <h3 className="menu-card__title">Latte macchiato</h3>
-          <p className="menu-card__text">Espresso with frothed milk and chocolate</p>
-          <p className="menu-card__price">$5.50</p>
-        </div>
-        <div className="menu-card">
-          <div className="menu-card__img8 menu-card__img"></div>
-          <h3 className="menu-card__title">Coffee with cognac</h3>
-          <p className="menu-card__text">Fragrant black coffee with cognac and whipped cream</p>
-          <p className="menu-card__price">$6.50</p>
-        </div>
-      </div>
+      )}
     </section>
   );
 };

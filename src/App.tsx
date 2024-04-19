@@ -11,17 +11,15 @@ export default function App() {
 
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
-      <Header isHome={isHomePage} setHome={setIsHomePage}/>
+      <Header isHome={isHomePage} setHome={setIsHomePage} />
 
       <Routes>
-        <Route path="/" element={<Home setHome={setIsHomePage}/>}></Route>
+        <Route path="/" element={<Home setHome={setIsHomePage} />}></Route>
         <Route path="/menu" element={<Menu />}></Route>
         <Route path="/*" element={<NotFound />}></Route>
       </Routes>
 
       <Footer />
-
     </BrowserRouter>
   );
-};
-
+}
