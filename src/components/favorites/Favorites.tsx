@@ -2,8 +2,8 @@ import styles from "./styles.module.scss";
 import { useState } from "react";
 import { listFavoriteCoffee } from "../../store/favoriteCoffee";
 
-function Favorites() {
-  const [numberCoffee, setNumberCoffee] = useState<number>(0);
+export default function Favorites() {
+  const [ numberCoffee, setNumberCoffee ] = useState<number>(0);
   const [currentCoffee, setCurrentCoffee] = useState(listFavoriteCoffee[numberCoffee]);
 
   const onClickLeft = () => {
@@ -35,7 +35,7 @@ function Favorites() {
       <div className={styles.slider}>
         <div className={styles.slider__arrow} onClick={onClickLeft}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.5 7H1M1 7L7 1M1 7L7 13" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M13.5 7H1M1 7L7 1M1 7L7 13" stroke="#403F3D" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
         <div className={styles.card}>
@@ -46,7 +46,7 @@ function Favorites() {
         </div>
         <div className={styles.slider__arrow} onClick={onClickRight}>
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M1 7H13.5M13.5 7L7.5 1M13.5 7L7.5 13" stroke="#403F3D" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </div>
       </div>
@@ -59,4 +59,3 @@ function Favorites() {
   );
 };
 
-export default Favorites;

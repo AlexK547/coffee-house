@@ -6,7 +6,7 @@ import Header from "./components/header/Header";
 import { useState } from "react";
 import Footer from "./components/footer/Footer";
 
-function App() {
+export default function App() {
   const [isHomePage, setIsHomePage] = useState(true);
 
   return (
@@ -25,4 +25,3 @@ function App() {
   );
 };
 
-export default App;
